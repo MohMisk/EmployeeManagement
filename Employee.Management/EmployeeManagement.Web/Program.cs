@@ -1,4 +1,4 @@
-using EmployeeManagement.Web.Data;
+using EmployeeManagementWeb.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
