@@ -2,7 +2,7 @@
 
 namespace EmployeeManagementWeb.Data.Entities
 {
-    public class EmployeeManagementWebUser : IdentityUser
+    public class CustomIdentityUser : IdentityUser
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
