@@ -65,7 +65,7 @@ namespace EmployeeManagementWeb.Areas.Identity.Pages.Account
 
             
             [Required]
-            [Display(Name = "Phone Number")]
+            [Range(0, 9999999999, ErrorMessage = "Please enter valid Number")]
             [DataType(DataType.PhoneNumber)]
             [StringLength(10, ErrorMessage = "Length should be 10 characters", MinimumLength = 10)]
             public string PhoneNumber { get; set; }

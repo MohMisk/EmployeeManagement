@@ -1,6 +1,7 @@
 ﻿using EmployeeManagementWeb.Data.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace EmployeeManagementWeb.Data
 {
@@ -11,9 +12,17 @@ namespace EmployeeManagementWeb.Data
         {
         }
 
+        public DbSet<Employee>? Employees { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<Employee>(entity =>
+            {
+                entity.Property(e => e.DepartmentId)
+                .HasColumnType("int");
+            });
         }
     }
 }
